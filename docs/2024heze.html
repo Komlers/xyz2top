@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>域名已迁移</title>
+	<title>文章已迁移</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -9,15 +9,36 @@
             font-family: Arial, sans-serif;
             font-size: 20px;
             line-height: 1.5;
-            margin-top: auto;
+            margin-top: 20%;
             text-align: center;
             background-color: #f2f2f2;
         }
+        #countdown {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
     </style>
+    <script>
+        window.onload = function() {
+            var countdownElement = document.getElementById('countdown');
+            var seconds = 3;
+            countdownElement.textContent = '页面将在 ' + seconds + ' 秒后跳转到新网址。';
+
+            var countdownInterval = setInterval(function() {
+                seconds--;
+                countdownElement.textContent = '页面将在 ' + seconds + ' 秒后跳转到新网址。';
+                if (seconds <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = "https://hz.danevan.top/";
+                }
+            }, 1000);
+        };
+    </script>
 </head>
 <body>
-	<h1>域名已迁移</h1>
-    <p>请访问<br /><a href="https://hz.danevan.top/old/">https://hz.danevan.top/old/</a></p>
-    <p>或新版文章<br /><a href="https://hz.danevan.top/">https://hz.danevan.top/</a></p>
+	<h1>文章已迁移</h1>
+    <p id="countdown"></p>
+    <p>请访问<br /><a href="https://hz.danevan.top/old/">https://hz.danevan.top/</a></p>
+    <p>或旧版文章<br /><a href="https://hz.danevan.top/">https://hz.danevan.top/old/</a></p>
 </body>
 </html>

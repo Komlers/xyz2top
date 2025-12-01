@@ -9,14 +9,35 @@
             font-family: Arial, sans-serif;
             font-size: 20px;
             line-height: 1.5;
-            margin-top: auto;
+            margin-top: 20%;
             text-align: center;
             background-color: #f2f2f2;
         }
+        #countdown {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
     </style>
+    <script>
+        window.onload = function() {
+            var countdownElement = document.getElementById('countdown');
+            var seconds = 3;
+            countdownElement.textContent = '页面将在 ' + seconds + ' 秒后跳转到新网址。';
+
+            var countdownInterval = setInterval(function() {
+                seconds--;
+                countdownElement.textContent = '页面将在 ' + seconds + ' 秒后跳转到新网址。';
+                if (seconds <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = "https://www.danevan.top/";
+                }
+            }, 1000);
+        };
+    </script>
 </head>
 <body>
 	<h1>域名已迁移</h1>
+    <div id="countdown"></div>
     <p>请访问 <a href="https://www.danevan.top/">www.danevan.top</a></p>
 </body>
 </html>
