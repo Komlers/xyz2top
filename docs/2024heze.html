@@ -22,11 +22,11 @@
         window.onload = function() {
             var countdownElement = document.getElementById('countdown');
             var seconds = 3;
-            countdownElement.textContent = '页面将在 ' + seconds + ' 秒后跳转到新网址。';
+            countdownElement.textContent = '将在 ' + seconds + ' 秒后自动跳转到新文章';
 
             var countdownInterval = setInterval(function() {
                 seconds--;
-                countdownElement.textContent = '页面将在 ' + seconds + ' 秒后跳转到新网址。';
+                countdownElement.textContent = '将在 ' + seconds + ' 秒后自动跳转到新文章';
                 if (seconds <= 0) {
                     clearInterval(countdownInterval);
                     window.location.href = "https://hz.danevan.top/";
@@ -38,7 +38,7 @@
 <body>
 	<h1>文章已迁移</h1>
     <p id="countdown"></p>
-    <p>请访问<br /><a href="https://hz.danevan.top/old/">https://hz.danevan.top/</a></p>
-    <p>或旧版文章<br /><a href="https://hz.danevan.top/">https://hz.danevan.top/old/</a></p>
+    <p>请访问<br /><a href="https://hz.danevan.top/">https://hz.danevan.top/</a></p>
+    <p>或旧版文章<br /><a href="https://hz.danevan.top/old/">https://hz.danevan.top/old/</a></p>
 </body>
 </html>
